@@ -2,7 +2,7 @@
 ##height and calculates their BMI
 ## 
 ## Ref -- https://www.calculatorsoup.com/calculators/health/bmi-calculator.php
-##
+## B 
 
 
 def calculate_bmi(weight_kg, height_m):
