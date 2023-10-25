@@ -1,5 +1,5 @@
 class BankAccount:
-    def __init__(self, account_number="", holder="", balance=0.0, account_type="Savings"): #MARCA EL CONTROL, siempre empezar asi las class 
+    def __init__(self, account_number="", holder="", balance=0.0, account_type="Savings"):
         self.account_number = account_number
         self.holder = holder
         self.balance = balance
@@ -36,14 +36,12 @@ class BankAccount:
         else:
             print("Invalid deposit amount. Amount must be greater than 0.")
 
-
     def withdraw(self, amount):
         if amount > 0 and amount <= self.balance:
             self.balance -= amount
             print(f"Withdrew ${amount}. New balance: ${self.balance}")
         else:
             print("Invalid withdrawal. Either the amount is invalid or insufficient funds.")
-
 
     def print_balance(self):
         print(f"Account Number: {self.account_number}")
@@ -54,13 +52,6 @@ class BankAccount:
 # Example usage of the BankAccount class:
 account = BankAccount("11111111", "John Doe", 1000.0, "Pensiones")
 account.print_balance()
-##
-# Account Number: 11111111
-# Account Holder: John Doe
-# Account Type: Pensiones
-# Current Balance: $1000.0
 
 account.deposit(500)
-# Deposited $500. New balance: $1500.0
 account.withdraw(200)
-# Withdrew $200. New balance: $1300.0
